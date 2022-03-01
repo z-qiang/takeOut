@@ -1,0 +1,26 @@
+<view class="all">
+  <view class="all-a">
+    <view class="top-ball">
+      <!-- 用户头像-->
+    <open-data type="{{img}}" class="T-image"></open-data>
+  </view>
+  <view class="{{imgc}}"></view>
+    <!-- 用户昵称 -->
+  <open-data type="{{name}}" class="T-name"></open-data>
+  <button bindtap="login" wx:if="{{hasUserInfo}}" class="btn_d">点击登录</button>
+  </view>
+</view>
+<view class="kuang">
+        <view class="bubble"></view>
+        <view class="bubble"></view>
+        <view class="bubble"></view>
+        <view class="bubble"></view>
+        <view class="bubble"></view>
+        <view class="bubble"></view>
+        <view class="bubble"></view>
+        <view class="bubble"></view>  
+        <view class="bubble"></view>
+        <view class="bubble"></view>
+</view>
+
+

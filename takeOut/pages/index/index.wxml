@@ -1,0 +1,40 @@
+<!-- 轮播图 -->
+<block wx:for="{{listData}}" wx:key="*this">
+  <swiper indicator-dots="true" autoplay="true" interval="4000" duration="500"  class="swiper-all">
+    <block wx:for="{{item.imgUrls}}" wx:for-item= "imgItem"  wx:key="*this">
+      <swiper-item>
+        <image src="{{imgItem.src}}" class="slider-image" lazy-load="true" show-menu-by-longpress='true'>
+      </image> 
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+
+<!-- banner -->
+<block wx:for="{{listData}}" wx:key="*this">
+  <view class="menu-bar" bindtap="gostart">
+    <view class="menu-block" bindtap="gostart">
+      <view class="menu-start">开启点餐之旅-></view>
+    </view>
+  </view>
+  <!-- 推广图 -->
+  <view class="ad-box" bindtap="gostart">
+    <!-- <image src="{{item.image_ad}}"></image> -->
+    <!-- show-menu-by-longpress长按发送 -->
+    <image src="{{item.image_ad}}" class="ad-box-img" lazy-load="true" show-menu-by-longpress='true'>
+      </image> 
+  </view>
+</block>
+
+<!-- 底部商品 -->
+
+<block wx:for="{{listData}}" wx:key="*this">
+  长按保存图片
+  <view class="bottom-box">
+    <view class="bottom-pic" wx:for="{{item.image_bottom}}" wx:for-item="bottomItem" wx:key="*this">
+    <!-- show-menu-by-longpress长按发送 -->
+      <image src="{{bottomItem.src}}" class="btm-image" data-id="{{bottomItem.id}}" lazy-load="true" show-menu-by-longpress='true'>
+      </image> 
+    </view>
+  </view>
+</block>
