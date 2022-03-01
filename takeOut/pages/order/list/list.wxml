@@ -1,0 +1,31 @@
+<!-- 无订单时的提示 -->
+<view class="tip" wx:if="{{b_show}}" bindtap="goFood">还没有点餐，快去点餐吧！</view>
+<view class="btn_o" wx:if="{{b_show}}" bindtap="goFood">
+  <a href="#" class="item item1">
+    GO
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+</view>
+
+<!-- 订单信息 -->
+<scroll-view class="container" scroll-y="true">
+  <view class="orderFood" wx:for="{{orderFoods}}" wx:key="*this">
+    <view data-index="{{index}}" bindtap="showList">
+      <view class="orderFood-time">下单时间：{{item.orderTime}}</view>
+      <view class="orderFood-content">
+        <view class="orderFood-content-left">
+          <view class="o-name">{{item.cartList[0].name}}</view>
+          <view class="o-num">等{{item.length}}件商品</view>
+          <view class="o-orice">￥{{item.sumMonney}}</view>
+        </view>
+        <view class="orderFood-content-right">
+          <view class="nofood">未取餐</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="bottom" wx:if="{{is_show}}">到底啦~</view>
